@@ -167,6 +167,9 @@ footer {
     margin-left:70px;
     width:350px;
 }
+.card_aside img{
+    border-radius:10px 0px 0px 10px;
+}
 .inside{
     margin-left:15px;
 }
