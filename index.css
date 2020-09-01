@@ -78,12 +78,25 @@ aside {
 aside h2{
     margin-left:30px;
 }
-footer{
-    grid-area:footer;
+content {
+    grid-area: content;
+    display: block;
+    background-color: #fcfcfa;
+    margin-top:20px;
+    border-radius:15px 15px 15px 15px;
+    width:1670px;
 }
-content{
-    grid-area:content;
-    display:block;
+content h3{
+    margin-left:40px;
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    margin-top:40px;
+    margin-bottom: 40px;
+    width:1670px;
 }
 .fa, .fab, .fad, .fal, .far, .fas {
     padding-right: 5px;
@@ -157,4 +170,15 @@ content{
 .tete_content{
     display:flex;
     justify-content:space-around;
+}
+.card_content {
+    color: black;
+    background-color: white;
+    border: 8px solid white;
+    border-radius: 10px 10px;
+    box-shadow: 2px 2px#DEEBFF;
+    margin-top:40px;
+}
+.block_footer{
+    display:block;
 }
