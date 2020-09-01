@@ -1,58 +1,184 @@
 ﻿body {
+    display:grid;
+    grid-template-areas: ". header header header header ."
+                                  ". section section section section ."
+                                  ". main main main aside ."
+                                  ". content content content content ."
+                                  ". footer footer footer footer .";
+    grid-template-columns:5% 15% 20% 30% 25% 5%;
+    font-family: 'Raleway', sans-serif;
 }
-
 header {
+    grid-area: header;
     display: flex;
 }
-
 header nav {
-        display: flex;
-        margin-left: auto;
-        margin-right: 5em;
+    display: flex;
+    margin-left: auto;
+    margin-right: 5em;
     }
-
-        header nav p {
-            padding: 0px 25px;
-        }
-
-    header a {
-        text-decoration: none;
-        color: black;
+header nav p {
+    padding: 0px 25px;
+ }
+header a {
+    text-decoration: none;
+    color: black;
+}
+header nav p:hover {
+    border-top: 2px solid #0082ff;
+    color: #0082ff;
+ }
+section{
+    grid-area:section
+}
+section span input {
+    background-color: #0082ff;
+    color:white;
     }
-
-    header nav p:hover {
-        border-top: 2px solid #0082ff;
-        color: #0082ff;
-    }
-
-    header nav a:visited {
-        color: blue;
-    }
-
 section nav {
     display: flex;
     align-items: baseline;
 }
-
-    section nav p {
-        padding: 0px 15px;
-        margin: 0px 5px;
-        border: 2px solid #F2F2F2;
-        border-radius: 15px 15px;
+section nav p {
+    display:flex;
+    padding: 0px 15px;
+    margin: 0px 5px;
+    border: 2px solid #F2F2F2;
+    border-radius: 15px 15px;
+}
+section nav p img {
+    display: flex;
+    margin-left: -18px;
+    margin-right:10px;
+    flex-direction: row;
+    border: 2px solid #DEEBFF;
+    border-radius:  50%;
+    background-color: #DEEBFF;
+}
+main {
+    background-color: #F2F2F2;
+    display:block;
+    grid-area: main;
+    max-height:700px;
+    max-width:1100px;
+    border-radius:18px 18px;
+}
+main h2, main h4 {
+    margin-left:45px;
+}
+aside {
+    grid-area: aside;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-wrap:wrap;
+    width:500px;
+    margin-left:-60px;
+    border-radius:15px 15px 15px 15px;
+}
+aside h2{
+    margin-left:30px;
+}
+content {
+    grid-area: content;
+    display: block;
+    background-color: #fcfcfa;
+    margin-top:20px;
+    border-radius:15px 15px 15px 15px;
+    width:1670px;
+}
+content h3{
+    margin-left:40px;
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    margin-top:40px;
+    margin-bottom: 40px;
+    width:1670px;
+}
+.fa, .fab, .fad, .fal, .far, .fas {
+    padding-right: 5px;
+}
+.SearchBar {
+    overflow: hidden;
+    background-color: #F2F2F2;
+    width: 255px;
+    border: 1px solid #F2F2F2;
+    border-radius: 5px 10px 10px 5px;
+    padding-left: 10px;
+}
+.SearchBar input[type=text] {
+    border: none;
+    margin-top: 0px;
+    margin-right: -4px;
+    font-size: 13px;
+    height: 30px;
+}
+.SearchBar input[type=button] {
+    border: none;
+    width:90px;
+    height:30px;
+    margin-top: 0px;
+    margin-right: -2px;
+    font-size: 13px;
+    color: white;
+    background-color: #0082ff;
     }
-
-        section nav p img {
-            display: flex;
-            flex-direction: row;
-            border: 2px solid #DEEBFF;
-            background-color: #DEEBFF;
-        }
-
 .card {
     color: black;
-    background-color: #F2F2F2;
+    background-color: white;
+    border: 8px solid white;
+    border-radius: 10px 10px;
+    box-shadow: 2px 2px#DEEBFF;
 }
-
+.card img{
+    border-radius:10px 10px 10px 10px;
+}
 .card, a {
     text-decoration: none;
+}
+.checked {
+    color: #0082ff;
+}
+.block_un{
+    display:flex;
+    justify-content:space-around;
+}
+.block_deux{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-around;
+}
+#aside_logo{
+    margin-left:14em;
+}
+.card_aside {
+    color: black;
+    background-color: white;
+    border: 8px solid white;
+    border-radius: 10px 10px;
+    box-shadow: 2px 2px#DEEBFF;
+    display:flex;
+    margin-left:70px;
+    width:350px;
+}
+.inside{
+    margin-left:15px;
+}
+.tete_content{
+    display:flex;
+    justify-content:space-around;
+}
+.card_content {
+    color: black;
+    background-color: white;
+    border: 8px solid white;
+    border-radius: 10px 10px;
+    box-shadow: 2px 2px#DEEBFF;
+    margin-top:40px;
+}
+.block_footer{
+    display:block;
 }
