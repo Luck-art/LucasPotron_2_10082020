@@ -5,7 +5,7 @@
                                   ". main main main aside ."
                                   ". content content content content ."
                                   ". footer footer footer footer .";
-    grid-template-columns:10% 10% 20% 30% 20% 10%;
+    grid-template-columns:5% 15% 20% 30% 25% 5%;
 }
 header {
     grid-area: header;
@@ -59,10 +59,23 @@ main {
     display:block;
     grid-area: main;
     max-height:700px;
+    max-width:1100px;
     border-radius:18px 18px;
 }
-aside{
-    grid-area:aside;
+main h2, main h4 {
+    margin-left:45px;
+}
+aside {
+    grid-area: aside;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-wrap:wrap;
+    width:500px;
+    margin-left:-60px;
+    border-radius:15px 15px 15px 15px;
+}
+aside h2{
+    margin-left:30px;
 }
 footer{
     grid-area:footer;
@@ -70,18 +83,40 @@ footer{
 content{
     grid-area:content;
 }
+.fa, .fab, .fad, .fal, .far, .fas {
+    padding-right: 5px;
+}
+.SearchBar {
+    overflow: hidden;
+    background-color: #F2F2F2;
+    width: 255px;
+    border: 1px solid #F2F2F2;
+    border-radius: 5px 10px 10px 5px;
+    padding-left: 10px;
+}
+.SearchBar input[type=text] {
+    border: none;
+    margin-top: 0px;
+    margin-right: -4px;
+    font-size: 13px;
+    height: 30px;
+}
+.SearchBar input[type=button] {
+    border: none;
+    width:90px;
+    height:30px;
+    margin-top: 0px;
+    margin-right: -2px;
+    font-size: 13px;
+    color: white;
+    background-color: #0082ff;
+    }
 .card {
     color: black;
     background-color: white;
     border: 8px solid white;
     border-radius: 10px 10px;
     box-shadow: 2px 2px#DEEBFF;
-}
-.pointeur {
-    border: 2px solid #F2F2F2;
-}
-.pointeur input {
-    border-radius: 15px 15px;
 }
 .card, a {
     text-decoration: none;
@@ -97,4 +132,20 @@ content{
     margin-top:20px;
     display:flex;
     justify-content:space-around;
+}
+#aside_logo{
+    margin-left:14em;
+}
+.card_aside {
+    color: black;
+    background-color: white;
+    border: 8px solid white;
+    border-radius: 10px 10px;
+    box-shadow: 2px 2px#DEEBFF;
+    display:flex;
+    margin-left:70px;
+    width:350px;
+}
+.inside{
+    margin-left:15px;
 }
