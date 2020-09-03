@@ -8,17 +8,19 @@
     <title>Reservia</title>
     <link type="text/css" href="index.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <p><img src="Logos/Reservia.png" alt="Logo de Reservia" /></p>
         <nav>
             <a href="#hebergements"><p>Hébergements</p></a>
             <a href="#activites"><p>Activités</p></a>
-            <a href=""><p class="inscription"><p><strong>S'inscrire</strong></p></a>
+            <a href=""><p><strong><span class="inscription">S'inscrire</span></strong></p></a>
         </nav>
     </header>
+
     <section>
         <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
         <p>En plein centre ville ou en pleine nature.</p>
@@ -29,13 +31,14 @@
         </div>
         <nav>
             <h4>Filtres</h4>
-            <p><img src="Logos/dollar.png" alt="Logo dollar" />Economique</p>
+            <p id="dollar"><img src="Logos/dollar.png" alt="Logo dollar" />Economique</p>
             <p><img src="Logos/bonhomme.png" alt="Logo personnage" />Familial</p>
             <p><img src="Logos/coeur.png" alt="Logo coeur" />Romantique</p>
             <p><img src="Logos/chien.png" alt="Logo chien" />Animaux autorisés</p>
         </nav>
         <p><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville.</p> <!--Le "i class" permet d'insérer l'icone du "info"-->
     </section>
+
     <main>
         <h2 id="hebergements">Hébergements à Marseille</h2>
         <div class="block_un">
@@ -123,12 +126,14 @@
         </div> <!--Fin du block numéro deux-->
         <h4>Afficher plus</h4>
     </main>
+
     <aside>
         <h2>Les plus populaires</h2><p><img src="Logos\boost.png" alt="Logo" id="aside_logo" /></p>
-        <a href="">
-            <!--L'intégralité de l'aside est en href-->
-            <div class="card_aside">
-                <img src="images\home\small\house7.jpg" alt="Hôtel le soleil du matin">
+
+        <!--L'intégralité de l'aside est en href-->
+        <div class="card_aside">
+            <a href="">
+                <img src="images\home\small\house7.jpg" alt="Hôtel le soleil du matin" id="soleil_matin">
                 <div class="inside">
                     <h3>Hôtel le soleil du<br /> matin</h3>
                     <p>Nuit à partir de 128€</p>
@@ -138,12 +143,12 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
 
-        <a href="">
-            <div class="card_aside">
-                <img src="images\home\small\house8.jpg" alt="Au coeur de l'eau Chambres d'hôtes">
+        <div class="card_aside">
+            <a href="">
+                <img src="images\home\small\house8.jpg" alt="Au coeur de l'eau Chambres d'hôtes" id="chambre_hote">
                 <div class="inside">
                     <h3>Au coeur de l'eau<br /> Chambres d'hôtes</h3>
                     <p>Nuit à partir de 71€</p>
@@ -153,11 +158,11 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
 
-        <a href="">
-            <div class="card_aside">
+        <div class="card_aside">
+            <a href="">
                 <img src="images\home\small\house9.jpg" alt="Hôtel Tout bleu et Blanc">
                 <div class="inside">
                     <h3>Hôtel Tout bleu et <br />Blanc</h3>
@@ -168,43 +173,42 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
                 </div>
-            </div>
-        </a>
-
-
+            </a>
+        </div>
     </aside>
+
     <content>
         <h3 id="activites">Activités à Marseille</h3>
 
         <div class="tete_content">
-            <div class="card">
-                <img src="images\activites\small\Port.jpg" alt="Vieux Port" />
+            <div class="card_content">
+                <img src="images\activites\small\Port.jpg" alt="Vieux Port" id="port" />
                 <p>Vieux Port</p>
             </div>
 
             <div class="block">
-                <div class="card">
+                <div class="card_content">
                     <img src="images\activites\small\Fort.jpg" alt="Fort de Pornègues" />
                     <p>Fort de Pornègues</p>
                 </div>
                 <div class="card_content">
-                    <img src="images\activites\small\Iles.jpg" alt="Iles du Frioul" />
+                    <img src="images\activites\small\Iles.jpg" alt="Iles du Frioul" id="iles" />
                     <p>Iles du Frioul</p>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card_content">
                 <img src="images\activites\small\Calanques.jpg" alt="Parc National des Calanques" />
                 <p>Parc National des Calanques</p>
             </div>
 
             <div class="block">
-                <div class="card">
+                <div class="card_content">
                     <img src="images\activites\small\Eglise.jpg" alt="Notre-Dame-de-la-Garde" />
                     <p>Notre-Dame-de-la-Garde</p>
                 </div>
                 <div class="card_content">
-                    <img src="images\activites\small\Parc.jpg" alt="Parc Longchamp" />
+                    <img src="images\activites\small\Parc.jpg" alt="Parc Longchamp" id="longchamp" />
                     <p>Parc Longchamp</p>
                 </div>
             </div>
@@ -232,6 +236,6 @@
         </div>
     </footer>
 
-        <script src="https://kit.fontawesome.com/ae220ac128.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ae220ac128.js" crossorigin="anonymous"></script>
 </body>
 </html>

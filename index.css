@@ -11,11 +11,12 @@
 header {
     grid-area: header;
     display: flex;
+    margin-left:9em;
 }
 header nav {
     display: flex;
     margin-left: auto;
-    margin-right: 5em;
+    margin-right: 6.5em;
     }
 header nav p {
     padding: 0px 25px;
@@ -29,7 +30,9 @@ header nav p:hover {
     color: #0082ff;
  }
 section{
-    grid-area:section
+    grid-area:section;
+    margin-left:9em;
+        
 }
 section span input {
     background-color: #0082ff;
@@ -60,8 +63,9 @@ main {
     display:block;
     grid-area: main;
     max-height:700px;
-    max-width:1100px;
+    max-width:900px;
     border-radius:18px 18px;
+    margin-left:8em;
 }
 main h2, main h4 {
     margin-left:45px;
@@ -71,8 +75,8 @@ aside {
     background-color: #F2F2F2;
     display: flex;
     flex-wrap:wrap;
-    width:500px;
-    margin-left:-60px;
+    width:490px;
+    margin-left:-9em;
     border-radius:15px 15px 15px 15px;
 }
 aside h2{
@@ -81,13 +85,11 @@ aside h2{
 content {
     grid-area: content;
     display: block;
-    background-color: #fcfcfa;
     margin-top:20px;
     border-radius:15px 15px 15px 15px;
-    width:1670px;
 }
 content h3{
-    margin-left:40px;
+    margin-left:7.5em;
 }
 footer {
     grid-area: footer;
@@ -95,11 +97,13 @@ footer {
     justify-content: space-around;
     background-color: #F2F2F2;
     margin-top:40px;
-    margin-bottom: 40px;
     width:1670px;
 }
 .fa, .fab, .fad, .fal, .far, .fas {
     padding-right: 5px;
+}
+#dollar{
+    height:24px;
 }
 .SearchBar {
     overflow: hidden;
@@ -126,7 +130,7 @@ footer {
     color: white;
     background-color: #0082ff;
     }
-.inscription {
+span p, .inscription {
     color: blue;
 }
 .card {
@@ -155,9 +159,9 @@ footer {
     justify-content:space-around;
 }
 #aside_logo{
-    margin-left:14em;
+    margin-left:11em;
 }
-.card_aside {
+.card_aside a{
     color: black;
     background-color: white;
     border: 8px solid white;
@@ -170,21 +174,77 @@ footer {
 .card_aside img{
     border-radius:10px 0px 0px 10px;
 }
+#soleil_matin, 
+#chambre_hote{
+    max-width:140px;
+}
 .inside{
     margin-left:15px;
 }
 .tete_content{
     display:flex;
     justify-content:space-around;
+    margin:0px 80px 0px 80px;
 }
 .card_content {
     color: black;
     background-color: white;
-    border: 8px solid white;
     border-radius: 10px 10px;
-    box-shadow: 2px 2px#DEEBFF;
-    margin-top:40px;
-}
+    box-shadow: 0px 0px 2em #deddd9;
+    margin-top: 40px;
+    max-height: 450px;
+}.card_content img{
+     border-radius:15px 15px 0px 0px;
+ }
+ .card_content p{
+     margin-left:10px;
+ }
+ #port{
+     max-height:375px;
+ }
+ #iles{
+     margin-top: -13px;
+ }
 .block_footer{
     display:block;
+}
+@media all and (max-device-width: 480px) { /*Responsive mobile*/
+   body{
+       display:grid;
+       grid-template-areas:"header header header header"
+                                    "section section section section"
+                                    "aside aside aside aside"
+                                    "main main main main"
+                                    "content content content content"
+                                    "footer footer footer footer";
+       grid-template-columns: 20% 20% 30% 30% ;
+   }
+   header{
+       grid-area:header;
+       margin:auto;
+       max-width:480px;
+   }
+    header nav {
+        display: flex;
+        margin: auto;
+        flex-wrap:wrap-reverse;
+    }
+    header nav p {
+    padding: 0px 25px;
+    }
+   section{
+       grid-area:section;
+   }
+   aside{
+       grid-area:aside;
+   }
+   main{
+       grid-area:main;
+   }
+   content{
+       grid-area:content;
+   }
+   footer{
+       grid-area:footer;
+   }
 }
