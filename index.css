@@ -31,8 +31,7 @@ header nav p:hover {
  }
 section{
     grid-area:section;
-    margin-left:9em;
-        
+    margin-left:9em;      
 }
 section span input {
     background-color: #0082ff;
@@ -174,8 +173,7 @@ span p, .inscription {
 .card_aside img{
     border-radius:10px 0px 0px 10px;
 }
-#soleil_matin, 
-#chambre_hote{
+#soleil_matin, #chambre_hote{
     max-width:140px;
 }
 .inside{
@@ -217,12 +215,13 @@ span p, .inscription {
                                     "main main main main"
                                     "content content content content"
                                     "footer footer footer footer";
-       grid-template-columns: 20% 20% 30% 30% ;
+       grid-template-columns:  20% 20% 30% 30%  ;
+       max-height:4500px;
+       height:auto;
    }
    header{
        grid-area:header;
        margin:auto;
-       max-width:480px;
    }
     header nav {
         display: flex;
@@ -230,21 +229,100 @@ span p, .inscription {
         flex-wrap:wrap-reverse;
     }
     header nav p {
-    padding: 0px 25px;
+       padding: 0px 25px;
     }
    section{
        grid-area:section;
+       margin:auto;
    }
+   section nav {
+       display: block;
+       align-items: baseline;
+       flex-wrap:wrap;
+    }
+    section nav p {
+        max-width:150px;
+        margin:12px 0px 8px 12px;
+    }
+    section nav p img {
+        padding:5px 5px 5px 5px;
+    }
    aside{
        grid-area:aside;
+       margin:auto;
+       width:auto;
    }
    main{
-       grid-area:main;
-   }
+       grid-area: main;
+       max-height:2000px;
+       max-width:1500px;
+       margin:auto;
+}
+main h2, main h4 {
+    margin-left:45px;
+}
    content{
        grid-area:content;
    }
    footer{
        grid-area:footer;
    }
+   .inscription{
+       margin-left:12em;
+   }
+   #famille{
+       float:right;
+       margin:-45px 50px 0px 0px;
+   }
+   #chien{
+       max-width:170px;
+   }
+   #animaux{
+       padding-top:5px;
+   }
+   #romantique{
+       padding-top:5px;
+       padding-left:10px;
+   }
+   #familial{
+       padding-top:6px;
+   }
+   #economique{
+       padding-top:6px;
+       padding-left:9px;
+   }
+   #dollar{
+       height:auto;
+   }
+   #logements{
+       max-width:320px;
+       margin-left:14px;
+   }
+    .SearchBar {
+       width: auto;
+       padding-left: 10px;
+    }
+    .SearchBar input[type=text] {
+       margin-top: 0px;
+       margin-right: -4px;
+       height: 30px;
+       width:293px;
+    }
+    #aside_logo {
+        margin-left: 7em;
+    }
+    .card_aside a {
+        display: flex;
+        margin-left:25px;
+        width: 350px;
+    }
+    .block_un{
+       display:block;
+       justify-content:space-around;
+}
+    .block_deux{
+      margin-top:20px;
+      display:block;
+      justify-content:space-around;
+}
 }
