@@ -101,6 +101,13 @@ footer {
     margin-top:40px;
     width:1670px;
 }
+#inscrip {
+    color: blue;
+}
+#inscrip:hover {
+    border-top: none;
+    color: #0082ff;
+}
 .fa, .fab, .fad, .fal, .far, .fas {
     padding-right: 5px;
 }
@@ -110,7 +117,7 @@ footer {
 .SearchBar {
     overflow: hidden;
     background-color: #F2F2F2;
-    width: 255px;
+    width: 285px;
     border: 1px solid #F2F2F2;
     border-radius: 5px 10px 10px 5px;
     padding-left: 10px;
@@ -124,7 +131,7 @@ footer {
 }
 .SearchBar input[type=button] {
     border: none;
-    width:90px;
+    width:107px;
     height:30px;
     margin-top: 0px;
     margin-right: -2px;
@@ -132,9 +139,7 @@ footer {
     color: white;
     background-color: #0082ff;
     }
-span p, .inscription {
-    color: blue;
-}
+
 .card_main {
     color: black;
     background-color: white;
@@ -350,9 +355,8 @@ span p, .inscription {
     }
     .SearchBar input[type=text] {
        margin-top: 0px;
-       margin-right: -4px;
        height: 30px;
-       width:340px;
+       width:200px;
     }
     #aside_logo {
         margin-left: 7em;
