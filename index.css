@@ -99,7 +99,9 @@ footer {
     justify-content: space-around;
     background-color: #F2F2F2;
     margin-top:40px;
-    width:1670px;
+    max-width:1800px;
+    width:auto;
+    height:300px;
 }
 #inscrip {
     color: blue;
@@ -128,6 +130,7 @@ footer {
     margin-right: -4px;
     font-size: 13px;
     height: 30px;
+    width:154px;
 }
 .SearchBar input[type=button] {
     border: none;
@@ -138,14 +141,13 @@ footer {
     font-size: 13px;
     color: white;
     background-color: #0082ff;
-    }
-
+  }
 .card_main {
     color: black;
     background-color: white;
     border: 8px solid white;
     border-radius: 10px 10px;
-    box-shadow: 2px 2px#DEEBFF;
+    box-shadow: 5px 5px 10px#DEEBFF;
 }
 .card_main img{
     border-radius:10px 10px 0px 0px;
@@ -200,21 +202,42 @@ footer {
     color: black;
     background-color: white;
     border-radius: 10px 10px;
-    box-shadow: 0px 0px 2em #deddd9;
+    box-shadow: 5px 5px 10px #deddd9;
     margin-top: 40px;
     max-height: 450px;
-}.card_content img{
+}
+.card_content img{
      border-radius:15px 15px 0px 0px;
  }
  .card_content p{
      margin-left:10px;
  }
- #port{
-     max-height:375px;
+.card_content_alone {
+    color: black;
+    background-color: white;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 10px #deddd9;
+    margin-top: 40px;
+    height: 390px;
+}
+.card_content_alone img{
+     border-radius:15px 15px 0px 0px;
  }
- #iles{
-     margin-top: -13px;
+ .card_content_alone p{
+     margin-left:10px;
  }
+ #iles, #fort, #eglise, #longchamp {
+    max-height: 135px;
+    width: 250px;
+}
+#port {
+    height: 348px;
+    width: 250px;
+}
+#parc_calanques {
+    height: 348px;
+    width: 250px;
+}
 .block_footer{
     display:block;
 }
@@ -289,14 +312,16 @@ footer {
         margin-right:-30em;
     }
     main h2, main h4 {
-    margin-left:45px;
+       margin-left:45px;
     }
    content{
        grid-area:content;
    }
-   footer{
-       grid-area:footer;
-   }
+    footer {
+        grid-area: footer;
+        display: block;
+        height: 500px;
+    }
    #inscrip{
        border-bottom:none;
    }
@@ -304,7 +329,7 @@ footer {
         margin-left: 12em;
     }
     .inscription:hover {
-            color: #0082ff;
+        color: #0082ff;
     }
    #hebergements{
        margin-left:-10em;
@@ -323,7 +348,7 @@ footer {
    }
    #famille{
        float:right;
-       margin:-45px 50px 0px 0px;
+       margin:-45px 10px 0px 0px;
    }
    #chien{
        max-width:170px;
@@ -387,5 +412,43 @@ footer {
     #hotel_cannebiere, #hotel_port, #hotel_mer, #hotel_mouettes, #hotel_panier, #hotel_amina {
         max-height: 140px;
         width: 400px;
+    }
+    .tete_content {
+        display: block;
+        margin: auto;
+    }
+    .card_content {
+        border-radius: 10px 10px;
+        margin-top: auto;
+        max-width: 420px;
+        width: auto;
+        margin: auto;
+        margin-top: 20px;
+    }
+     .card_content p{
+        margin-left:auto;
+    }
+    .card_content_alone {
+        border-radius: 10px 10px;
+        margin-top: auto;
+        max-width: 420px;
+        width: auto;
+        margin: auto;
+        margin-top: 20px;
+        height:auto;
+    }
+     .card_content_alone p{
+        margin-left:auto;
+    }
+    #iles, #port, #parc_calanques, #fort, #eglise, #longchamp {
+        max-height: 150px;
+        height:auto;
+        width: 420px;
+    }
+    .block_footer {
+        margin-top: 45px;
+        margin-left: 30px;
+        max-width:200px;
+        width:auto;
     }
 }
