@@ -135,18 +135,22 @@ footer {
 span p, .inscription {
     color: blue;
 }
-.card {
+.card_main {
     color: black;
     background-color: white;
     border: 8px solid white;
     border-radius: 10px 10px;
     box-shadow: 2px 2px#DEEBFF;
 }
-.card img{
-    border-radius:10px 10px 10px 10px;
+.card_main img{
+    border-radius:10px 10px 0px 0px;
 }
-.card, a {
+.card_main, a {
     text-decoration: none;
+}
+#hotel_cannebiere, #hotel_port, #hotel_mer, #hotel_mouettes, #hotel_panier, #hotel_amina{
+    max-height: 135px;
+    width: 250px;
 }
 .checked {
     color: #0082ff;
@@ -238,7 +242,7 @@ span p, .inscription {
     header nav p:hover {
        border-top: none;
        border-bottom: 4px solid #0082ff;
-        }
+     }
     section {
         grid-area: section;
         margin: auto;
@@ -273,12 +277,15 @@ span p, .inscription {
         max-height: 2000px;
         max-width: 1500px;
         margin: auto;
-        margin-top: 5em; /*Je met un margin top en plus du "auto" pour créer l'espace en haut*/
-        width: auto;
+        width: 480px;
+        background-color: white;
     }
-main h2, main h4 {
+    main + h2{
+        margin-right:-30em;
+    }
+    main h2, main h4 {
     margin-left:45px;
-}
+    }
    content{
        grid-area:content;
    }
@@ -299,10 +306,13 @@ main h2, main h4 {
        text-align:center;
        width:185px;
    }
-   #activites{
-       width:185px;
-       text-align:center;
-   }
+   #heberg_marseille{
+       width:auto;
+    }
+    #activites {
+        width: 185px;
+        text-align: center;
+    }
    #reservia{
        margin-bottom:72px;
    }
@@ -363,5 +373,15 @@ main h2, main h4 {
 }
     card_aside {
         margin-top: 35px;
+    }
+    .card_main{
+        max-width:400px;
+        width:auto;
+        margin:auto;
+        margin-top:20px;
+    }
+    #hotel_cannebiere, #hotel_port, #hotel_mer, #hotel_mouettes, #hotel_panier, #hotel_amina {
+        max-height: 140px;
+        width: 400px;
     }
 }
