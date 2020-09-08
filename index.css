@@ -241,8 +241,8 @@ footer {
 .block_footer{
     display:block;
 }
-@media all and (max-device-width: 480px) { /*Responsive mobile*/
-   body{
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){ /*Responsive tablette*/
+       body{
        display:grid;
        grid-template-areas:"header header header header"
                                     "section section section section"
@@ -450,5 +450,213 @@ footer {
         margin-left: 30px;
         max-width:200px;
         width:auto;
+    }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { /*Responsive mobile*/
+    body {
+        display: grid;
+        grid-template-areas: "header header header header" "section section section section" "aside aside aside aside" "main main main main" "content content content content" "footer footer footer footer";
+        grid-template-columns: 20% 20% 30% 30%;
+        max-height: 4500px;
+        height: auto;
+    }
+
+    header {
+        grid-area: header;
+        margin: auto;
+    }
+    header nav {
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap-reverse;
+    }
+    header nav p {
+        padding: 0px 25px;
+        border-bottom: 4px solid #F2F2F2;
+    }
+    header nav p:hover {
+        border-top: none;
+        border-bottom: 4px solid #0082ff;
+    }
+    section {
+        grid-area: section;
+        margin: auto;
+        margin-top: -30px;
+    }
+    section h3 {
+        max-width: 250px;
+        width: auto;
+    }
+   section nav {
+        display: block;
+        align-items: baseline;
+        flex-wrap: wrap;
+   }
+   section nav p {
+        max-width: 150px;
+        margin: 12px 0px 8px 12px;
+   }
+   section nav p img {
+        padding: 5px 5px 5px 5px;
+   }
+   aside {
+        grid-area: aside;
+        margin: auto;
+        margin-left: -7px; /*Je met un margin négatif en plus du "auto" pour combler l'espace à gauche*/
+        border-radius: 0px;
+        height: 700px;
+        padding-left: 20px;
+   }
+   main {
+        grid-area: main;
+        max-height: 2000px;
+        max-width: 1500px;
+        margin: auto;
+        width: 480px;
+        background-color: white;
+    }
+   main + h2 {
+        margin-right: -30em;
+    }
+    main h2, main h4 {
+        margin-left: 45px;
+    }
+    content {
+        grid-area: content;
+    }
+     footer {
+        grid-area: footer;
+        display: block;
+        height: 500px;
+     }
+     #inscrip {
+        border-bottom: none;
+     }
+     .inscription {
+        margin-left: 12em;
+     }
+     .inscription:hover {
+        color: #0082ff;
+     }
+     #hebergements {
+        margin-left: -10em;
+        text-align: center;
+        width: 185px;
+     }
+     #heberg_marseille {
+        width: auto;
+     }
+     #activites {
+        width: 185px;
+        text-align: center;
+     }
+     #reservia {
+        margin-bottom: 72px;
+     }
+     #famille {
+        float: right;
+        margin: -45px 10px 0px 0px;
+     }
+     #chien {
+        max-width: 170px;
+     }
+     #animaux {
+        padding-top: 5px;
+     }
+     #romantique {
+        padding-top: 5px;
+        padding-left: 10px;
+     }
+     #familial {
+        padding-top: 6px;
+     }
+     #economique {
+        padding-top: 6px;
+        padding-left: 9px;
+     }
+    #dollar {
+        height: auto;
+    }
+    #logements {
+        max-width: 320px;
+        margin-left: 14px;
+    }
+    .SearchBar {
+        width: auto;
+        padding-left: 10px;
+    }
+    .SearchBar input[type=text] {
+        margin-top: 0px;
+        height: 30px;
+        width: 200px;
+    }
+    #aside_logo {
+        margin-left: 7em;
+    }
+    .card_aside a {
+        display: flex;
+        margin-left: 25px;
+        width: 350px;
+    }
+
+    .block_un {
+        display: block;
+        justify-content: space-around;
+    }
+    .block_deux {
+        margin-top: 20px;
+        display: block;
+        justify-content: space-around;
+    }
+    card_aside {
+        margin-top: 35px;
+    }
+    .card_main {
+        max-width: 400px;
+        width: auto;
+        margin: auto;
+        margin-top: 20px;
+    }
+    #hotel_cannebiere, #hotel_port, #hotel_mer, #hotel_mouettes, #hotel_panier, #hotel_amina {
+        max-height: 140px;
+        width: 400px;
+    }
+    .tete_content {
+        display: block;
+        margin: auto;
+    }
+    .card_content {
+        border-radius: 10px 10px;
+        margin-top: auto;
+        max-width: 420px;
+        width: auto;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .card_content p {
+        margin-left: auto;
+    }
+    .card_content_alone {
+        border-radius: 10px 10px;
+        margin-top: auto;
+        max-width: 420px;
+        width: auto;
+        margin: auto;
+        margin-top: 20px;
+        height: auto;
+    }
+    .card_content_alone p {
+            margin-left: auto;
+    }
+    #iles, #port, #parc_calanques, #fort, #eglise, #longchamp {
+        max-height: 150px;
+        height: auto;
+        width: 420px;
+    }
+    .block_footer {
+        margin-top: 45px;
+        margin-left: 30px;
+        max-width: 200px;
+        width: auto;
     }
 }
