@@ -40,6 +40,7 @@ section span input {
 section nav {
     display: flex;
     align-items: baseline;
+    margin-top:15px;
 }
 section nav p {
     display:flex;
@@ -48,6 +49,11 @@ section nav p {
     border: 2px solid #F2F2F2;
     border-radius: 15px 15px;
 }
+   section nav h4{
+       margin:auto;
+       margin-right: inherit;
+       margin-left: inherit;
+   }
 section nav p img {
     display: flex;
     margin-left: -18px;
@@ -99,8 +105,8 @@ footer {
     justify-content: space-around;
     background-color: #F2F2F2;
     margin-top:40px;
-    max-width:1800px;
-    width:auto;
+    margin-left:-100px;
+    width:1905px;
     height:300px;
 }
 #inscrip {
@@ -196,7 +202,7 @@ footer {
 .tete_content{
     display:flex;
     justify-content:space-around;
-    margin:0px 80px 0px 80px;
+    margin:0px 200px 0px 200px;
 }
 .card_content {
     color: black;
@@ -210,7 +216,8 @@ footer {
      border-radius:15px 15px 0px 0px;
  }
  .card_content p{
-     margin-left:10px;
+     margin-left:15px;
+     height:30px;
  }
 .card_content_alone {
     color: black;
@@ -218,13 +225,15 @@ footer {
     border-radius: 10px 10px;
     box-shadow: 5px 5px 10px #deddd9;
     margin-top: 40px;
-    height: 390px;
+     height: 410px;
 }
 .card_content_alone img{
      border-radius:15px 15px 0px 0px;
  }
  .card_content_alone p{
-     margin-left:10px;
+     margin-left:15px;
+     margin-top:26px;
+     
  }
  #iles, #fort, #eglise, #longchamp {
     max-height: 135px;
@@ -241,177 +250,231 @@ footer {
 .block_footer{
     display:block;
 }
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){ /*Responsive tablette*/
-       body{
-       display:grid;
-       grid-template-areas:"header header header header"
-                                    "section section section section"
-                                    "aside aside aside aside"
-                                    "main main main main"
-                                    "content content content content"
-                                    "footer footer footer footer";
-       grid-template-columns:  20% 20% 30% 30%  ;
-       max-height:4500px;
-       height:auto;
-   }
-   header{
-       grid-area:header;
-       margin:auto;
-   }
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { /*Responsive tablette*/
+     body {
+        display: grid;
+        grid-template-areas: "header header header header"
+                                      "section section section section" 
+                                      "aside aside aside aside"
+                                      "main main main main" 
+                                      "content content content content"
+                                       "footer footer footer footer";
+        grid-template-columns: 20% 20% 30% 30%;
+        max-height: 4500px;
+        height: auto;
+    }
+    header {
+        grid-area: header;
+        margin: auto;
+        max-width:800px;
+        min-width:768px;
+        width:auto;
+    }
     header nav {
         display: flex;
         margin: auto;
-        flex-wrap:wrap-reverse;
+        width:auto;
+        flex-wrap: wrap-reverse;
+        min-width: 768px;
+        max-width: 800px;
     }
     header nav p {
-       padding: 0px 25px;
-       border-bottom:4px solid #F2F2F2;
+        padding: 0px 50px;
+        border-bottom: 4px solid #F2F2F2;
     }
     header nav p:hover {
-       border-top: none;
-       border-bottom: 4px solid #0082ff;
-     }
+        border-top: none;
+        border-bottom: 4px solid #0082ff;
+    }
     section {
         grid-area: section;
         margin: auto;
         margin-top: -30px;
-    }
-    section h3{
-        max-width:250px;
+        min-width:768px;
+        max-width:800px;
         width:auto;
+        height:600px;
+    }
+    section h3 {
+        max-width: 500px;
+        width: auto;
+        margin:auto;
+    }
+    section h3+p{
+        text-align:center;
     }
    section nav {
-       display: block;
-       align-items: baseline;
-       flex-wrap:wrap;
-    }
-    section nav p {
-        max-width:150px;
-        margin:12px 0px 8px 12px;
-    }
-    section nav p img {
-        padding:5px 5px 5px 5px;
-    }
-    aside {
+        display: flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        min-width:100px;
+        width:auto;
+        margin:auto;
+   }
+   section nav h4{
+       margin-top:3em;
+   }
+   section nav p {
+        max-width: 150px;
+        margin: 32px 0px 8px 12px;
+   }
+   section nav p img {
+        padding: 5px 5px 5px 5px;
+   }
+   aside { 
         grid-area: aside;
+        display:block;
         margin: auto;
         margin-left: -7px; /*Je met un margin négatif en plus du "auto" pour combler l'espace à gauche*/
         border-radius: 0px;
-        height:700px;
-        padding-left:20px;
-    }
-    main {
+        min-height:700px;
+        height: auto;
+        width:800px;
+        padding-left: 25px;
+   }
+   aside h2{
+       margin-left:10em;
+   }
+   main {
         grid-area: main;
         max-height: 2000px;
-        max-width: 1500px;
         margin: auto;
-        width: 480px;
+        width: auto;
         background-color: white;
     }
-    main + h2{
-        margin-right:-30em;
+   main + h2 {
+        margin-right: -30em;
     }
-    main h2, main h4 {
-       margin-left:45px;
+    main h2 {
+        margin-left: 45px;
     }
-   content{
-       grid-area:content;
-   }
-    footer {
+    main h4{
+        margin:auto;
+        margin-top:20px;
+    }
+    content {
+        grid-area: content;
+        min-width:768px;
+        max-width:1024px;
+        width:auto;
+        margin:auto;
+        margin-top:20px;
+    }
+    content h3{
+        margin:auto;
+        margin-left: 16em;
+    }
+     footer {
         grid-area: footer;
         display: block;
         height: 500px;
-    }
-   #inscrip{
-       border-bottom:none;
-   }
-    .inscription {
-        margin-left: 12em;
-    }
-    .inscription:hover {
+     }
+     #inscrip {
+        border-bottom: none;
+        margin-top: -15px;
+     }
+     .inscription {
+        margin-left: 22.5em;
+     }
+     .inscription:hover {
         color: #0082ff;
-    }
-   #hebergements{
-       margin-left:-10em;
-       text-align:center;
-       width:185px;
-   }
-   #heberg_marseille{
-       width:auto;
-    }
-    #activites {
-        width: 185px;
+     }
+     #hebergements {
+        margin-left: -10em;
         text-align: center;
+        width: auto;
+        min-width: 300px;
+        max-width:1024px;
+     }
+     #heberg_marseille {
+        width: auto;
+     }
+     #activites {
+        width: auto;
+        text-align: center;
+        min-width: 300px;
+        max-width:414px;
+     }
+     #reservia {
+        margin-bottom: 72px;
+     }
+     #famille {
+        margin-top: 32px;
+     }
+     #chien {
+        max-width: 170px;
+     }
+     #animaux {
+        padding-top: 5px;
+     }
+     #romantique {
+        padding-top: 5px;
+        padding-left: 10px;
+     }
+     #familial {
+        padding-top: 6px;
+     }
+     #economique {
+        padding-top: 6px;
+        padding-left: 9px;
+     }
+    #dollar {
+        height: auto;
     }
-   #reservia{
-       margin-bottom:72px;
-   }
-   #famille{
-       float:right;
-       margin:-45px 10px 0px 0px;
-   }
-   #chien{
-       max-width:170px;
-   }
-   #animaux{
-       padding-top:5px;
-   }
-   #romantique{
-       padding-top:5px;
-       padding-left:10px;
-   }
-   #familial{
-       padding-top:6px;
-   }
-   #economique{
-       padding-top:6px;
-       padding-left:9px;
-   }
-   #dollar{
-       height:auto;
-   }
-   #logements{
-       max-width:320px;
-       margin-left:14px;
-   }
+    #logements {
+        text-align:center;
+        max-width: 350px;
+        margin:auto;
+        margin-top:12px;
+    }
     .SearchBar {
-       width: auto;
-       padding-left: 10px;
+        width: auto;
+        max-width:800px;
+        min-width:768px;
+        padding-left: 10px;
+        margin:auto;
     }
     .SearchBar input[type=text] {
-       margin-top: 0px;
-       height: 30px;
-       width:200px;
+        margin-top: 0px;
+        height: 30px;
+        width: 630px;
     }
+    .SearchBar input[type=button] {
+        width:115px;
+  }
     #aside_logo {
-        margin-left: 7em;
+        margin:-50px 280px 0px 0px;
+        float:right;
     }
     .card_aside a {
         display: flex;
-        margin-left:25px;
-        width: 350px;
+        margin-left: auto;
+        width: auto;
+    }
+      .card_aside {
+        margin:auto;
+        margin-right:16em;
+        margin-top:30px;
+        width:350px;
     }
     .block_un {
         display: block;
         justify-content: space-around;
     }
-    .block_deux{
-      margin-top:20px;
-      display:block;
-      justify-content:space-around;
-}
-    card_aside {
-        margin-top: 35px;
+    .block_deux {
+        margin-top: 20px;
+        display: block;
+        justify-content: space-around;
     }
-    .card_main{
-        max-width:400px;
-        width:auto;
-        margin:auto;
-        margin-top:20px;
+    .card_main {
+        width: 350px;
+        margin: auto;
+        margin-top: 20px;
     }
     #hotel_cannebiere, #hotel_port, #hotel_mer, #hotel_mouettes, #hotel_panier, #hotel_amina {
         max-height: 140px;
-        width: 400px;
+        width: 350px;
     }
     .tete_content {
         display: block;
@@ -420,42 +483,47 @@ footer {
     .card_content {
         border-radius: 10px 10px;
         margin-top: auto;
-        max-width: 420px;
-        width: auto;
+        width: 350px;
         margin: auto;
         margin-top: 20px;
     }
-     .card_content p{
-        margin-left:auto;
+    .card_content p {
+        margin-left: 15px;
+        padding-bottom:10px;
     }
     .card_content_alone {
         border-radius: 10px 10px;
         margin-top: auto;
-        max-width: 420px;
-        width: auto;
+        width: 350px;
         margin: auto;
         margin-top: 20px;
-        height:auto;
+        height: auto;
     }
-     .card_content_alone p{
-        margin-left:auto;
+    .card_content_alone p {
+        margin-left: 15px;
+        padding-bottom:10px;
     }
     #iles, #port, #parc_calanques, #fort, #eglise, #longchamp {
         max-height: 150px;
-        height:auto;
-        width: 420px;
+        height: auto;
+        width:350px;
     }
     .block_footer {
         margin-top: 45px;
-        margin-left: 30px;
-        max-width:200px;
-        width:auto;
+        margin-left: 300px;
+        max-width: 200px;
+        width: auto;
     }
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { /*Responsive mobile*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) { /*Responsive mobile*/
     body {
         display: grid;
-        grid-template-areas: "header header header header" "section section section section" "aside aside aside aside" "main main main main" "content content content content" "footer footer footer footer";
+        grid-template-areas: "header header header header"
+                                      "section section section section" 
+                                      "aside aside aside aside"
+                                      "main main main main" 
+                                      "content content content content"
+                                       "footer footer footer footer";
         grid-template-columns: 20% 20% 30% 30%;
         max-height: 4500px;
         height: auto;
@@ -464,11 +532,16 @@ footer {
     header {
         grid-area: header;
         margin: auto;
+        max-width:767px;
+        width:auto;
     }
     header nav {
         display: flex;
         margin: auto;
+        width:auto;
         flex-wrap: wrap-reverse;
+        min-width: 320px;
+        max-width: 739px;
     }
     header nav p {
         padding: 0px 25px;
@@ -482,6 +555,7 @@ footer {
         grid-area: section;
         margin: auto;
         margin-top: -30px;
+        width:auto;
     }
     section h3 {
         max-width: 250px;
@@ -491,6 +565,7 @@ footer {
         display: block;
         align-items: baseline;
         flex-wrap: wrap;
+        width:auto;
    }
    section nav p {
         max-width: 150px;
@@ -504,36 +579,56 @@ footer {
         margin: auto;
         margin-left: -7px; /*Je met un margin négatif en plus du "auto" pour combler l'espace à gauche*/
         border-radius: 0px;
-        height: 700px;
-        padding-left: 20px;
+        min-height:700px;
+        height: auto;
+        min-width:400px;
+        width:auto;
+        padding-left: 25px;
    }
    main {
         grid-area: main;
         max-height: 2000px;
-        max-width: 1500px;
         margin: auto;
-        width: 480px;
+        width: auto;
         background-color: white;
     }
    main + h2 {
         margin-right: -30em;
     }
-    main h2, main h4 {
+    main h2 {
         margin-left: 45px;
+    }
+    main h4{
+        margin:auto;
+        margin-top:20px;
     }
     content {
         grid-area: content;
+        min-width:320px;
+        max-width:767px;
+        width:auto;
+        margin:auto;
+        margin-top:30px;
+    }
+    content h3{
+        margin:auto;
     }
      footer {
         grid-area: footer;
         display: block;
         height: 500px;
+        margin:auto;
+        margin-left:-15px;
+        width:auto;
+        min-width:450px;
+        max-width:500px;
      }
      #inscrip {
         border-bottom: none;
+        margin-top: -15px;
      }
      .inscription {
-        margin-left: 12em;
+        margin-left: 5.5em;
      }
      .inscription:hover {
         color: #0082ff;
@@ -541,14 +636,18 @@ footer {
      #hebergements {
         margin-left: -10em;
         text-align: center;
-        width: 185px;
+        width: auto;
+        min-width: 150px;
+        max-width:414px;
      }
      #heberg_marseille {
         width: auto;
      }
      #activites {
-        width: 185px;
+        width: auto;
         text-align: center;
+        min-width: 165px;
+        max-width:414px;
      }
      #reservia {
         margin-bottom: 72px;
@@ -591,14 +690,17 @@ footer {
         width: 200px;
     }
     #aside_logo {
-        margin-left: 7em;
+        margin-left: 3em;
     }
     .card_aside a {
         display: flex;
-        margin-left: 25px;
-        width: 350px;
+        margin-left: auto;
+        width: auto;
     }
+      .card_aside {
 
+        width:320px;
+    }
     .block_un {
         display: block;
         justify-content: space-around;
@@ -608,18 +710,14 @@ footer {
         display: block;
         justify-content: space-around;
     }
-    card_aside {
-        margin-top: 35px;
-    }
     .card_main {
-        max-width: 400px;
-        width: auto;
+        width: 320px;
         margin: auto;
         margin-top: 20px;
     }
     #hotel_cannebiere, #hotel_port, #hotel_mer, #hotel_mouettes, #hotel_panier, #hotel_amina {
         max-height: 140px;
-        width: 400px;
+        width: 320px;
     }
     .tete_content {
         display: block;
@@ -629,29 +727,35 @@ footer {
         border-radius: 10px 10px;
         margin-top: auto;
         max-width: 420px;
+        min-width:345px;
         width: auto;
         margin: auto;
         margin-top: 20px;
     }
     .card_content p {
-        margin-left: auto;
+        margin-left: 15px;
+        padding-bottom:10px;
     }
     .card_content_alone {
         border-radius: 10px 10px;
         margin-top: auto;
         max-width: 420px;
+        min-width:345px;
         width: auto;
         margin: auto;
         margin-top: 20px;
         height: auto;
     }
     .card_content_alone p {
-            margin-left: auto;
+        margin-left: 15px;
+        padding-bottom:10px;
     }
     #iles, #port, #parc_calanques, #fort, #eglise, #longchamp {
         max-height: 150px;
         height: auto;
-        width: 420px;
+        min-width:345px;
+        max-width:420px;
+        width:auto;
     }
     .block_footer {
         margin-top: 45px;
