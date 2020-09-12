@@ -44,20 +44,21 @@ section nav {
 }
 section nav p {
     display:flex;
-    padding: 0px 15px;
-    margin: 0px 5px;
+    padding: 0px 15px 0px 15px;
+    margin: 0px 5px 0px 25px;
     border: 2px solid #F2F2F2;
     border-radius: 15px 15px;
 }
-   section nav h4{
-       margin:auto;
-       margin-right: inherit;
-       margin-left: inherit;
+section nav h4{
+    margin:auto;
+    margin-right: inherit;
+    margin-left: inherit;
    }
 section nav p img {
     display: flex;
     margin-left: -18px;
     margin-right:10px;
+    padding:5px 5px 5px 5px;
     flex-direction: row;
     border: 2px solid #DEEBFF;
     border-radius:  50%;
@@ -119,9 +120,6 @@ footer {
 .fa, .fab, .fad, .fal, .far, .fas {
     padding-right: 5px;
 }
-#dollar{
-    height:24px;
-}
 .SearchBar {
     overflow: hidden;
     background-color: #F2F2F2;
@@ -148,6 +146,9 @@ footer {
     color: white;
     background-color: #0082ff;
   }
+#economique, #familial, #romantique, #animaux{
+    padding-top:7px;
+}
 .card_main {
     color: black;
     background-color: white;
@@ -415,9 +416,9 @@ footer {
      #familial {
         padding-top: 6px;
      }
-     #economique {
-        padding-top: 6px;
-        padding-left: 9px;
+     #economique {  
+        padding-top: 5px;
+        padding-left: 10px;
      }
     #dollar {
         height: auto;
