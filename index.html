@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <meta name="description" content="Page d'accueil du site web Reservia" />
@@ -10,15 +11,35 @@
     <link type="text/css" href="index.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54516992-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-54516992-1');
+    </script>
+
 </head>
+
 <body>
 
     <header>
         <p><img src="Logos/Reservia.png" alt="Logo de Reservia" id="reservia" /></p>
         <nav>
-            <a href="#heberg_marseille"><p id="hebergements">Hébergements</p></a>
-            <a href="#activ"><p id="activites">Activités</p></a>
-            <a href=""><p id="inscrip"><strong><span class="inscription">S'inscrire</span></strong></p></a>
+            <a href="#heberg_marseille">
+                <p id="hebergements">Hébergements</p>
+            </a>
+            <a href="#activ">
+                <p id="activites">Activités</p>
+            </a>
+            <a href="">
+                <p id="inscrip"><strong><span class="inscription">S'inscrire</span></strong></p>
+            </a>
         </nav>
     </header>
 
@@ -36,8 +57,9 @@
             <p id="famille"><img src="Logos/bonhomme.png" alt="Logo personnage" /><span id="familial">Familial</span></p>
             <p><img src="Logos/coeur.png" alt="Logo coeur" /><span id="romantique">Romantique</span></p>
             <p id="chien"><img src="Logos/chien.png" alt="Logo chien" /><span id="animaux">Animaux autorisés</span></p>
-        </nav>    
-        <p id="logements"><i class="fas fa-info-circle" style="color:#0082ff;"></i>Plus de 500 logements sont disponibles dans cette ville.</p> <!--Le "i class" permet d'insérer l'icone du "info"-->
+        </nav>
+        <p id="logements"><i class="fas fa-info-circle" style="color:#0082ff;"></i>Plus de 500 logements sont disponibles dans cette ville.</p>
+        <!--Le "i class" permet d'insérer l'icone du "info"-->
     </section>
 
     <main>
@@ -83,7 +105,8 @@
                     <span class="fa fa-star"></span>
                 </div>
             </a>
-        </div> <!--Fin du block numéro un-->
+        </div>
+        <!--Fin du block numéro un-->
         <div class="block_deux">
             <!--Début du block numéro deux-->
             <a href="">
@@ -124,12 +147,14 @@
                     <span class="fa fa-star checked"></span>
                 </div>
             </a>
-        </div> <!--Fin du block numéro deux-->
+        </div>
+        <!--Fin du block numéro deux-->
         <h4>Afficher plus</h4>
     </main>
 
     <aside>
-        <h2>Les plus populaires</h2><p><img src="Logos\boost.png" alt="Logo" id="aside_logo" /></p>
+        <h2>Les plus populaires</h2>
+        <p><img src="Logos\boost.png" alt="Logo" id="aside_logo" /></p>
 
         <!--L'intégralité de l'aside est en href-->
         <div class="card_aside">
@@ -239,4 +264,5 @@
 
     <script src="https://kit.fontawesome.com/ae220ac128.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
