@@ -125,7 +125,7 @@ footer {
     background-color: #F2F2F2;
     margin-top: 40px;
     margin-left: -100px;
-    width: 1905px;
+    width: 1900px;
     height: 300px;
 }
 
@@ -277,6 +277,42 @@ a {
     height: 30px;
 }
 
+.card_content_fort {
+    color: black;
+    background-color: white;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 10px #deddd9;
+    margin-top: 40px;
+    max-height: 450px;
+}
+
+.card_content_fort img {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card_content_fort p {
+    margin-left: 15px;
+    height: 30px;
+}
+
+.card_content_iles {
+    color: black;
+    background-color: white;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 10px #deddd9;
+    margin-top: 20px;
+    max-height: 450px;
+}
+
+.card_content_iles img {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card_content_iles p {
+    margin-left: 15px;
+    height: 30px;
+}
+
 .card_content_alone {
     color: black;
     background-color: white;
@@ -295,11 +331,19 @@ a {
     margin-top: 26px;
 }
 
-#iles,
-#fort,
 #eglise,
 #longchamp {
     max-height: 135px;
+    width: 250px;
+}
+
+#iles {
+    max-height: 105px;
+    width: 250px;
+}
+
+#fort {
+    max-height: 185px;
     width: 250px;
 }
 
@@ -331,6 +375,13 @@ a {
         grid-area: header;
         display: block;
         margin: auto;
+    }
+    header a {
+        text-decoration: none;
+        color: black;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
     }
     header nav {
         display: flex;
@@ -446,7 +497,6 @@ a {
         text-align: center;
         min-width: 384px;
         max-width: 400px;
-        padding: 0px;
         width: 100%;
     }
     #heberg_marseille {
@@ -454,9 +504,6 @@ a {
     }
     #activites {
         text-align: center;
-        min-width: 384px;
-        max-width: 400px;
-        padding: 0px;
         width: 100%;
     }
     #reservia {
@@ -556,6 +603,28 @@ a {
         margin-left: 15px;
         padding-bottom: 10px;
     }
+    .card_content_iles {
+        border-radius: 10px 10px;
+        margin-top: auto;
+        width: 350px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .card_content_iles p {
+        margin-left: 15px;
+        padding-bottom: 10px;
+    }
+    .card_content_fort {
+        border-radius: 10px 10px;
+        margin-top: auto;
+        width: 350px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .card_content_fort p {
+        margin-left: 15px;
+        padding-bottom: 10px;
+    }
     .card_content_alone {
         border-radius: 10px 10px;
         margin-top: auto;
@@ -615,6 +684,13 @@ a {
         border-top: none;
         border-bottom: 4px solid #0082ff;
     }
+    header a {
+        text-decoration: none;
+        color: black;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+    }
     section {
         grid-area: section;
         margin: auto;
@@ -640,13 +716,12 @@ a {
     aside {
         grid-area: aside;
         margin: auto;
-        margin-left: -7px;
         /*Je met un margin négatif en plus du "auto" pour combler l'espace à gauche*/
         border-radius: 0px;
         min-height: 700px;
-        height: auto;
         width: auto;
-        padding-left: 25px;
+        display: flex;
+        justify-content: center;
     }
     main {
         grid-area: main;
@@ -695,9 +770,6 @@ a {
     }
     #hebergements {
         text-align: center;
-        min-width: 180px;
-        max-width: 207px;
-        padding: 0px;
         width: 100%;
     }
     #heberg_marseille {
@@ -705,9 +777,6 @@ a {
     }
     #activites {
         text-align: center;
-        min-width: 180px;
-        max-width: 207px;
-        padding: 0px;
         width: 100%;
     }
     #reservia {
