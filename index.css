@@ -1,14 +1,14 @@
 ﻿body {
     display: grid;
-    grid-template-areas: ". header header header header ." ". section section section section ." ". main main main aside ." ". content content content content ." ". footer footer footer footer .";
+    grid-template-areas: ". header header header header ." ". section section section section ." ". main main main aside ." ". article article article article ." "footer footer footer footer footer footer";
     grid-template-columns: 5% 15% 20% 30% 25% 5%;
     font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
 
 header {
     grid-area: header;
     display: flex;
-    margin-left: 9em;
 }
 
 header nav {
@@ -33,7 +33,6 @@ header nav p:hover {
 
 section {
     grid-area: section;
-    margin-left: 9em;
 }
 
 section span input {
@@ -76,10 +75,8 @@ main {
     background-color: #F2F2F2;
     display: block;
     grid-area: main;
-    max-height: 700px;
-    max-width: 900px;
     border-radius: 18px 18px;
-    margin-left: 8em;
+    margin-right: 3em;
 }
 
 main h2,
@@ -92,13 +89,18 @@ aside {
     background-color: #F2F2F2;
     display: flex;
     flex-wrap: wrap;
-    width: 490px;
-    margin-left: -9em;
     border-radius: 15px 15px 15px 15px;
+    position: relative;
 }
 
 aside h2 {
     margin-left: 30px;
+}
+
+aside .boost_logo {
+    position: absolute;
+    right: 2em;
+    top: 0.5em;
 }
 
 aside span,
@@ -107,15 +109,11 @@ main span,
     color: silver;
 }
 
-content {
-    grid-area: content;
+article {
+    grid-area: article;
     display: block;
     margin-top: 20px;
     border-radius: 15px 15px 15px 15px;
-}
-
-content h3 {
-    margin-left: 7.5em;
 }
 
 footer {
@@ -124,9 +122,8 @@ footer {
     justify-content: space-around;
     background-color: #F2F2F2;
     margin-top: 40px;
-    margin-left: -100px;
-    width: 1900px;
-    height: 300px;
+    padding-top: 40px;
+    height: 100%;
 }
 
 #inscrip {
@@ -188,7 +185,9 @@ footer {
     background-color: white;
     border: 8px solid white;
     border-radius: 10px 10px;
-    box-shadow: 5px 5px 10px#DEEBFF;
+    box-shadow: 5px 5px 10px #DEEBFF;
+    width: 350px;
+    margin: 0px;
 }
 
 .card_main img {
@@ -207,7 +206,8 @@ a {
 #hotel_panier,
 #hotel_amina {
     max-height: 135px;
-    width: 250px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .checked {
@@ -226,7 +226,12 @@ a {
 }
 
 #aside_logo {
-    margin-left: 11em;
+    margin-left: 18em;
+}
+
+.card_aside {
+    width: 100%;
+    margin: 0 1.5em;
 }
 
 .card_aside a {
@@ -234,10 +239,8 @@ a {
     background-color: white;
     border: 8px solid white;
     border-radius: 15px 15px;
-    box-shadow: 2px 2px#DEEBFF;
-    display: flex;
-    margin-left: 60px;
-    width: 365px;
+    box-shadow: 2px 2px #DEEBFF;
+    display: flex;   
 }
 
 .card_aside img {
@@ -247,19 +250,23 @@ a {
 #soleil_matin,
 #chambre_hote {
     max-width: 140px;
+    object-fit: cover;
+}
+
+#hotel_bleu_blanc {
+    object-fit: cover;
 }
 
 .inside {
     margin-left: 15px;
 }
 
-.tete_content {
+.tete_article {
     display: flex;
-    justify-content: space-around;
-    margin: 0px 200px 0px 200px;
+    justify-content: space-between;
 }
 
-.card_content {
+.card_article {
     color: black;
     background-color: white;
     border-radius: 10px 10px;
@@ -268,93 +275,84 @@ a {
     max-height: 450px;
 }
 
-.card_content img {
+.card_article img {
     border-radius: 15px 15px 0px 0px;
 }
 
-.card_content p {
+.card_article p {
     margin-left: 15px;
     height: 30px;
 }
 
-.card_content_fort {
+.card_article_fort,
+.card_article_iles,
+.card_article_eglise,
+.card_article_longchamp {
     color: black;
     background-color: white;
     border-radius: 10px 10px;
     box-shadow: 5px 5px 10px #deddd9;
     margin-top: 40px;
     max-height: 450px;
+    width: 375px;
 }
 
-.card_content_fort img {
+.card_article_longchamp,
+.card_article_eglise {
+    min-height: 40%;
+}
+
+.card_article_longchamp p,
+.card_article_eglise p {
+    margin-left: 15px;
+}
+
+
+.card_article_fort img,
+.card_article_iles img,
+.card_article_eglise img,
+.card_article_longchamp img {
     border-radius: 15px 15px 0px 0px;
 }
 
-.card_content_fort p {
+.card_article_fort p,
+.card_article_iles p {
     margin-left: 15px;
     height: 30px;
 }
 
-.card_content_iles {
-    color: black;
-    background-color: white;
-    border-radius: 10px 10px;
-    box-shadow: 5px 5px 10px #deddd9;
-    margin-top: 20px;
-    max-height: 450px;
-}
-
-.card_content_iles img {
-    border-radius: 15px 15px 0px 0px;
-}
-
-.card_content_iles p {
-    margin-left: 15px;
-    height: 30px;
-}
-
-.card_content_alone {
+.card_article_alone {
     color: black;
     background-color: white;
     border-radius: 10px 10px;
     box-shadow: 5px 5px 10px #deddd9;
     margin-top: 40px;
     height: 410px;
+    width: 350px;
 }
 
-.card_content_alone img {
+.card_article_alone img {
     border-radius: 15px 15px 0px 0px;
 }
 
-.card_content_alone p {
+.card_article_alone p {
     margin-left: 15px;
     margin-top: 26px;
 }
 
 #eglise,
-#longchamp {
-    max-height: 135px;
-    width: 250px;
-}
-
-#iles {
-    max-height: 105px;
-    width: 250px;
-}
-
+#longchamp,
+#iles,
 #fort {
-    max-height: 185px;
-    width: 250px;
+    max-height: 135px;
+    width: 100%;
+    object-fit: cover;
 }
 
-#port {
-    height: 348px;
-    width: 250px;
-}
-
+#port,
 #parc_calanques {
     height: 348px;
-    width: 250px;
+    width: 100%;
 }
 
 .block_footer {
@@ -365,7 +363,7 @@ a {
     /*Responsive tablette*/
     body {
         display: grid;
-        grid-template-areas: "header header header header" "section section section section" "aside aside aside aside" "main main main main" "content content content content" "footer footer footer footer";
+        grid-template-areas: "header header header header" "section section section section" "aside aside aside aside" "main main main main" "article article article article" "footer footer footer footer";
         grid-template-columns: 20% 20% 30% 30%;
         max-height: 4500px;
         height: auto;
@@ -463,15 +461,15 @@ a {
         margin: auto;
         margin-top: 20px;
     }
-    content {
-        grid-area: content;
+    article {
+        grid-area: article;
         min-width: 768px;
         max-width: 1024px;
         width: auto;
         margin: auto;
         margin-top: 20px;
     }
-    content h3 {
+    article h3 {
         margin: auto;
         margin-left: 16em;
     }
@@ -546,7 +544,7 @@ a {
     .SearchBar input[type=text] {
         margin-top: 0px;
         height: 30px;
-        width: 81%;
+        width: 80%;
     }
     .SearchBar input[type=button] {
         width: 16%;
@@ -588,52 +586,58 @@ a {
         max-height: 140px;
         width: 350px;
     }
-    .tete_content {
+    .tete_article {
         display: block;
         margin: auto;
     }
-    .card_content {
+    .card_article {
         border-radius: 10px 10px;
         margin-top: auto;
         width: 350px;
         margin: auto;
         margin-top: 20px;
     }
-    .card_content p {
+    .card_article_fort,
+    .card_article_iles,
+    .card_article_eglise,
+    .card_article_longchamp {
+        margin: auto;
+    }
+    .card_article p {
         margin-left: 15px;
         padding-bottom: 10px;
     }
-    .card_content_iles {
+    .card_article_iles {
         border-radius: 10px 10px;
         margin-top: auto;
-        width: 350px;
+        width: 375px;
         margin: auto;
         margin-top: 20px;
     }
-    .card_content_iles p {
+    .card_article_iles p {
         margin-left: 15px;
         padding-bottom: 10px;
     }
-    .card_content_fort {
+    .card_article_fort {
         border-radius: 10px 10px;
         margin-top: auto;
-        width: 350px;
+        width: 375px;
         margin: auto;
         margin-top: 20px;
     }
-    .card_content_fort p {
+    .card_article_fort p {
         margin-left: 15px;
         padding-bottom: 10px;
     }
-    .card_content_alone {
+    .card_article_alone {
         border-radius: 10px 10px;
         margin-top: auto;
-        width: 350px;
+        width: 375px;
         margin: auto;
         margin-top: 20px;
         height: auto;
     }
-    .card_content_alone p {
+    .card_article_alone p {
         margin-left: 15px;
         padding-bottom: 10px;
     }
@@ -645,7 +649,7 @@ a {
     #longchamp {
         max-height: 150px;
         height: auto;
-        width: 350px;
+        width: 100%;
     }
     .block_footer {
         margin-top: 45px;
@@ -659,7 +663,7 @@ a {
     /*Responsive mobile*/
     body {
         display: grid;
-        grid-template-areas: "header header header header" "section section section section" "aside aside aside aside" "main main main main" "content content content content" "footer footer footer footer";
+        grid-template-areas: "header header header header" "section section section section" "aside aside aside aside" "main main main main" "article article article article" "footer footer footer footer";
         grid-template-columns: 20% 20% 30% 30%;
         max-height: 4500px;
         height: auto;
@@ -716,12 +720,10 @@ a {
     aside {
         grid-area: aside;
         margin: auto;
-        /*Je met un margin négatif en plus du "auto" pour combler l'espace à gauche*/
         border-radius: 0px;
         min-height: 700px;
         width: auto;
         display: flex;
-        justify-content: center;
     }
     main {
         grid-area: main;
@@ -740,15 +742,15 @@ a {
         margin: auto;
         margin-top: 20px;
     }
-    content {
-        grid-area: content;
+    article {
+        grid-area: article;
         min-width: 320px;
         max-width: 767px;
         width: auto;
         margin: auto;
         margin-top: 30px;
     }
-    content h3 {
+    article h3 {
         margin: auto;
     }
     footer {
@@ -854,11 +856,11 @@ a {
         max-height: 140px;
         width: 320px;
     }
-    .tete_content {
+    .tete_article {
         display: block;
         margin: auto;
     }
-    .card_content {
+    .card_article {
         border-radius: 10px 10px;
         margin-top: auto;
         max-width: 420px;
@@ -867,21 +869,33 @@ a {
         margin: auto;
         margin-top: 20px;
     }
-    .card_content p {
+    .card_article p {
         margin-left: 15px;
         padding-bottom: 10px;
     }
-    .card_content_alone {
+    .card_article_alone {
         border-radius: 10px 10px;
-        margin-top: auto;
-        max-width: 420px;
-        min-width: 345px;
-        width: auto;
-        margin: auto;
+        width: 90%;
+        margin: 0 auto;
         margin-top: 20px;
         height: auto;
     }
-    .card_content_alone p {
+
+    .card_article_fort,
+    .card_article_iles,
+    .card_article_eglise,
+    .card_article_longchamp {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card_article_fort img,
+    .card_article_iles img,
+    .card_article_eglise img,
+    .card_article_longchamp img {
+        width: 100%;
+    }
+    .card_article_alone p {
         margin-left: 15px;
         padding-bottom: 10px;
     }
@@ -893,9 +907,7 @@ a {
     #longchamp {
         max-height: 150px;
         height: auto;
-        min-width: 345px;
-        max-width: 420px;
-        width: auto;
+        width: 100%;
     }
     .block_footer {
         margin-top: 45px;
