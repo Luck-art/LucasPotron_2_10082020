@@ -42,16 +42,16 @@ section span input {
 
 section nav {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     margin-top: 15px;
 }
 
 section nav p {
     display: flex;
-    padding: 0px 15px 0px 15px;
+    padding: 5px 10px 0px 0px;
     margin: 0px 5px 0px 25px;
     border: 2px solid #F2F2F2;
-    border-radius: 15px 15px;
+    border-radius: 20px 20px;
 }
 
 section nav h4 {
@@ -177,7 +177,35 @@ footer {
 #familial,
 #romantique,
 #animaux {
-    padding-top: 7px;
+    padding: 5.5px;
+}
+
+#dollar:hover,
+#famille:hover,
+#chien:hover,
+#coeur:hover {
+    background-color: #0082ff;
+    color: white;
+}
+
+.fa-dog::before,
+.fa-heart::before,
+.fa-money-bill-wave::before {
+    font-size: x-large;
+    color: #0082ff;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.fa-child::before {
+    font-size: x-large;
+    color: #0082ff;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    padding: 7px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .card_main {
@@ -426,7 +454,6 @@ a {
         margin-top: 3em;
     }
     section nav p {
-        max-width: 150px;
         margin: 32px 0px 8px 12px;
     }
     section nav p img {
@@ -511,9 +538,6 @@ a {
     #famille {
         margin-top: 32px;
     }
-    #chien {
-        max-width: 170px;
-    }
     #animaux {
         padding-top: 5px;
     }
@@ -538,8 +562,8 @@ a {
         margin-top: 12px;
     }
     .SearchBar {
-        width: auto;
-        padding-left: 10px;
+        width: 80%;
+        margin: auto;
     }
     .SearchBar input[type=text] {
         margin-top: 0px;
@@ -790,7 +814,7 @@ a {
         margin: -45px 10px 0px 0px;
     }
     #chien {
-        max-width: 170px;
+        max-width: 200px;
     }
     #animaux {
         padding-top: 5px;
@@ -815,7 +839,6 @@ a {
     }
     .SearchBar {
         width: auto;
-        padding-left: 10px;
     }
     .SearchBar input[type=text] {
         margin-top: 0px;
