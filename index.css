@@ -14,11 +14,6 @@ header {
 header nav {
     display: flex;
     margin-left: auto;
-    margin-right: 6.5em;
-}
-
-header nav p {
-    padding: 0px 25px;
 }
 
 header a {
@@ -42,7 +37,6 @@ section span input {
 
 section nav {
     display: flex;
-    align-items: center;
     margin-top: 15px;
 }
 
@@ -126,6 +120,10 @@ footer {
     height: 100%;
 }
 
+#nav_hebergements_container,
+#nav_activites_container {
+    margin-right: 40px;
+}
 #inscrip {
     color: blue;
 }
@@ -177,7 +175,7 @@ footer {
 #familial,
 #romantique,
 #animaux {
-    padding: 5.5px;
+    padding: 5px 30px 5px 30px;
 }
 
 #dollar:hover,
@@ -390,24 +388,12 @@ a {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     /*Responsive tablette*/
     body {
-        display: grid;
         grid-template-areas: "header header header header" "section section section section" "aside aside aside aside" "main main main main" "article article article article" "footer footer footer footer";
         grid-template-columns: 20% 20% 30% 30%;
-        max-height: 4500px;
-        height: auto;
-        margin: auto;
-    }
-    header {
-        grid-area: header;
-        display: block;
-        margin: auto;
     }
     header a {
-        text-decoration: none;
-        color: black;
         width: 50%;
         display: flex;
-        flex-direction: row;
     }
     header nav {
         display: flex;
@@ -426,28 +412,18 @@ a {
         border-bottom: 4px solid #0082ff;
     }
     section {
-        grid-area: section;
-        margin: auto;
-        min-width: 768px;
-        max-width: 800px;
-        width: auto;
         height: 600px;
     }
     section h3 {
         max-width: 500px;
-        width: auto;
         margin: auto;
     }
     section h3+p {
         text-align: center;
     }
     section nav {
-        display: flex;
         flex-direction: column;
-        justify-content: space-around;
         align-items: center;
-        min-width: 100px;
-        width: auto;
         margin: auto;
     }
     section nav h4 {
@@ -460,26 +436,17 @@ a {
         padding: 5px 5px 5px 5px;
     }
     aside {
-        grid-area: aside;
         display: block;
-        margin: auto;
         border-radius: 0px;
         min-height: 700px;
-        height: auto;
         width: 100%;
     }
     aside h2 {
         margin-left: 10em;
     }
     main {
-        grid-area: main;
-        max-height: 2000px;
         margin: auto;
-        width: auto;
         background-color: white;
-    }
-    main+h2 {
-        margin-right: -30em;
     }
     main h2 {
         margin-left: 45px;
@@ -501,12 +468,11 @@ a {
         margin-left: 16em;
     }
     footer {
-        grid-area: footer;
         display: block;
-        height: 500px;
-        max-width: 800px;
-        min-width: 768px;
         width: 100%;
+    }
+    #nav_hebergements_container,
+    #nav_activites_container {
         margin: auto;
     }
     #inscrip {
@@ -524,9 +490,6 @@ a {
         max-width: 400px;
         width: 100%;
     }
-    #heberg_marseille {
-        width: auto;
-    }
     #activites {
         text-align: center;
         width: 100%;
@@ -534,9 +497,6 @@ a {
     #reservia {
         margin-top: -3%;
         position: absolute;
-    }
-    #famille {
-        margin-top: 32px;
     }
     #animaux {
         padding-top: 5px;
@@ -551,9 +511,6 @@ a {
     #economique {
         padding-top: 5px;
         padding-left: 10px;
-    }
-    #dollar {
-        height: auto;
     }
     #logements {
         text-align: center;
@@ -574,11 +531,6 @@ a {
         width: 16%;
     }
 
-    .card_aside a {
-        display: flex;
-        margin-left: auto;
-        width: auto;
-    }
     .card_aside {
         margin: auto;
         margin-top: 30px;
@@ -586,12 +538,9 @@ a {
     }
     .block_un {
         display: block;
-        justify-content: space-around;
     }
     .block_deux {
-        margin-top: 20px;
         display: block;
-        justify-content: space-around;
     }
     .card_main {
         width: 350px;
@@ -609,7 +558,6 @@ a {
     }
     .tete_article {
         display: block;
-        margin: auto;
     }
     .card_article {
         border-radius: 10px 10px;
@@ -675,29 +623,16 @@ a {
     .block_footer {
         margin-top: 45px;
         margin-left: 300px;
-        max-width: 200px;
-        width: auto;
     }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
     /*Responsive mobile*/
     body {
-        display: grid;
         grid-template-areas: "header header header header" "section section section section" "aside aside aside aside" "main main main main" "article article article article" "footer footer footer footer";
         grid-template-columns: 20% 20% 30% 30%;
-        max-height: 4500px;
-        height: auto;
-        margin: auto;
-    }
-    header {
-        grid-area: header;
-        margin: auto;
-        display: block;
     }
     header nav {
-        display: flex;
-        margin: auto;
         margin-top: 12%;
         flex-wrap: wrap-reverse;
     }
@@ -719,11 +654,9 @@ a {
     section {
         grid-area: section;
         margin: auto;
-        width: auto;
     }
     section h3 {
         max-width: 250px;
-        width: auto;
     }
     section nav {
         display: block;
@@ -739,18 +672,11 @@ a {
         padding: 5px 5px 5px 5px;
     }
     aside {
-        grid-area: aside;
-        margin: auto;
         border-radius: 0px;
         min-height: 700px;
-        width: auto;
-        display: flex;
     }
     main {
-        grid-area: main;
-        max-height: 2000px;
         margin: auto;
-        width: auto;
         background-color: white;
     }
     main+h2 {
@@ -764,21 +690,16 @@ a {
         margin-top: 20px;
     }
     article {
-        grid-area: article;
         min-width: 320px;
-        max-width: 767px;
-        width: auto;
         margin: auto;
         margin-top: 30px;
     }
-    article h3 {
-        margin: auto;
-    }
     footer {
-        grid-area: footer;
         display: block;
-        height: 500px;
         width: 100%;
+    }
+    #nav_hebergements_container,
+    #nav_activites_container {
         margin: auto;
     }
     #inscrip {
@@ -796,7 +717,7 @@ a {
         width: 100%;
     }
     #heberg_marseille {
-        width: auto;
+        margin: revert;
     }
     #activites {
         text-align: center;
@@ -808,13 +729,10 @@ a {
     }
     #famille {
         float: right;
-        margin: -45px 10px 0px 0px;
+        margin: -45px 0px 0px 10px;
     }
     #chien {
-        max-width: 200px;
-    }
-    #animaux {
-        padding-top: 5px;
+        max-width: 250px;
     }
     #romantique {
         padding-top: 5px;
@@ -827,12 +745,9 @@ a {
         padding-top: 6px;
         padding-left: 9px;
     }
-    #dollar {
-        height: auto;
-    }
     #logements {
         max-width: 320px;
-        margin-left: 14px;
+        margin: 54px 0px;
     }
     .SearchBar {
         width: auto;
@@ -843,26 +758,18 @@ a {
         width: 200px;
     }
 
-    .card_aside a {
-        display: flex;
-        margin-left: auto;
-        width: auto;
-    }
     .card_aside {
-        width: 320px;
+        width: max-content;
+        margin: auto;
     }
     .block_un {
         display: block;
-        justify-content: space-around;
     }
     .block_deux {
-        margin-top: 20px;
         display: block;
-        justify-content: space-around;
     }
     .card_main {
         width: 320px;
-        margin: auto;
         margin-top: 20px;
     }
     #hotel_cannebiere,
@@ -876,7 +783,6 @@ a {
     }
     .tete_article {
         display: block;
-        margin: auto;
     }
     .card_article {
         border-radius: 10px 10px;
@@ -893,9 +799,7 @@ a {
     }
     .card_article_alone {
         border-radius: 10px 10px;
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 20px;
+        width: auto;
         height: auto;
     }
 
@@ -903,8 +807,7 @@ a {
     .card_article_iles,
     .card_article_eglise,
     .card_article_longchamp {
-        width: 90%;
-        margin: 0 auto;
+        width: auto;
     }
 
     .card_article_fort img,
@@ -930,7 +833,5 @@ a {
     .block_footer {
         margin-top: 45px;
         margin-left: 30px;
-        max-width: 200px;
-        width: auto;
     }
 }
